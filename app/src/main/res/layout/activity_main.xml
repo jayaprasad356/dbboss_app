@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Activities.MainActivity">
+
+
+
+
+    <TextView
+
+        android:id="@+id/tvWhatsappNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        />
+
+
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                   >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:src="@drawable/applogo"
+                            android:textColor="@color/black"
+                            android:textFontWeight="600"
+                            android:textSize="22sp" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/toolbar"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        >
+
+
+
+                        <LinearLayout
+                            android:id="@+id/llWhatsappShare"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:background="@drawable/bg_card"
+                            android:layout_marginRight="10dp"
+                            >
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/whatsapp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Whatsapp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="4dp"
+
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/llWebsite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:background="@drawable/bg_card"
+                            >
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/website"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Matka Results"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="4dp"
+
+                                />
+
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        >
+
+
+
+                        <LinearLayout
+                            android:id="@+id/llHelpandSuppourt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:background="@drawable/bg_card"
+                            android:layout_marginRight="10dp"
+                            >
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/helpandsupport"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Help and Support"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="4dp"
+
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/llDownloadApk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:background="@drawable/bg_card"
+                            >
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/apk"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Matka Play App"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="4dp"
+
+                                />
+
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:id="@+id/tvPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        />
+
+
+
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
