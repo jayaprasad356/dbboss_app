@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     Activity activity;
     Session session;
+    ImageView imgTelegram,imgSupport;
 
 
     @Override
@@ -52,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
         Phonenumber = findViewById(R.id.tvPhoneNumber);
         Whatsapp = findViewById(R.id.tvWhatsappNumber);
+        imgTelegram = findViewById(R.id.imgTelegram);
+        imgSupport = findViewById(R.id.imgSupport);
 
 
 
@@ -88,6 +92,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        imgTelegram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(session.getData(Constant.TELEGRAM)));
+                startActivity(intent);
+
+            }
+        });
+
+        imgSupport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://api.whatsapp.com/send?phone="+"91"+session.getData(Constant.SUPPORT);
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+
+
+            }
+        });
+
         
         
 
@@ -115,6 +140,8 @@ public class MainActivity extends AppCompatActivity {
                         session.setData(Constant.WHATSAPP,jsonArray.getJSONObject(0).getString(Constant.WHATSAPP));
                         session.setData(Constant.WEB,jsonArray.getJSONObject(0).getString(Constant.WEB));
                         session.setData(Constant.APP,jsonArray.getJSONObject(0).getString(Constant.APP));
+                        session.setData(Constant.SUPPORT,jsonArray.getJSONObject(0).getString(Constant.SUPPORT));
+                        session.setData(Constant.TELEGRAM,jsonArray.getJSONObject(0).getString(Constant.TELEGRAM));
 
                         JSONArray jsonArray2 = jsonObject.getJSONArray(Constant.DASHBOARD_LIST);
                         Gson g = new Gson();
@@ -150,14 +177,10 @@ public class MainActivity extends AppCompatActivity {
     
 
     private void help_support() {
-
-
-
-
-        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", session.getData(Constant.CONTACT), null));
-        startActivity(intent);
-
-
+        String url = "https://api.whatsapp.com/send?phone="+"91"+session.getData(Constant.CONTACT);
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
 
 
     }

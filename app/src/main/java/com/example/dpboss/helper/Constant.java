@@ -14,10 +14,6 @@ public class Constant {
     public static final String LOGIN_URL = BaseUrl + "login.php";
     public static final String SETTING_URL = BaseUrl + "settings.php";
     public static final String DASHBOARD_INFO = BaseUrl + "dashboard_info.php";
-
-
-
-
     public static final String ID = "id";
     public static final String PROFILE = "profile";
     public static final String USER_ID = "user_id";
@@ -59,4 +55,6 @@ public class Constant {
     public static final String WHATSAPP = "whatsapp" ;
     public static final String WEB = "web";
     public static final String APP = "app";
+    public static final String SUPPORT = "support";
+    public static final String TELEGRAM = "telegram";
 }
